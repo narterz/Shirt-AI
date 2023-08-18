@@ -1,50 +1,58 @@
+// There is a massive parser bug associated with tailwind and scss which causes the build command to fail. 
+
 @forward './backgroundSVG.scss';
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;1,400&family=Exo:ital,wght@0,300;0,700;1,200&family=Indie+Flower&family=Inter:wght@700&family=Kanit:ital,wght@1,300;1,400&family=Raleway:ital,wght@0,200;0,300;0,400;1,100;1,600&display=swap');
-
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
 
     #root {
-        @apply bg-primary
+        @apply bg-primary;
+        box-sizing: border-box;
     }
 
     h1 {
-        @apply text-xxl tracking-wide
+        @apply text-xxl tracking-wide;
+        box-sizing: border-box;
     }
 
     h2 {
-        @apply text-xl tracking-normal
+        @apply text-xl tracking-normal;
+        box-sizing: border-box;
     }
 
     h3 {
-        @apply text-md tracking-normal
+        @apply text-md tracking-normal;
+        box-sizing: border-box;
     }
 
     h4 {
-        @apply text-sm tracking-normal text-white font-semibold
+        @apply text-sm tracking-normal text-white font-semibold;
+        box-sizing: border-box;
     }
 
     input {
-        @apply outline-none indent-3
+        @apply outline-none indent-3;
+        box-sizing: border-box;
     }
 
     a {
         @apply text-sm  md:text-md text-primary text-center transition-opacity delay-150 ease-in-out;
+        box-sizing: border-box;
     }
 
     button {
-        @apply transition-opacity delay-150 ease-in-out border rounded-lg bg-primary text-white font-semibold
+        @apply transition-opacity delay-150 ease-in-out border rounded-lg bg-primary text-white font-semibold;
+        box-sizing: border-box;
     }
 
     button:hover,
     a:hover {
-        @apply opacity-70
+        @apply opacity-70;
+        box-sizing: border-box;
     }
 }
 
@@ -53,7 +61,8 @@
 
     #nav {
         .icons {
-            @apply cursor-pointer text-white
+            @apply cursor-pointer text-white;
+            box-sizing: border-box;
         }
     }
 
@@ -67,35 +76,44 @@
     #howItWorks {
         .step {
             @apply flex flex-col xsm:max-md:items-center justify-center w-full h-full;
+            box-sizing: border-box;
 
             .step-box-title {
                 @apply xsm:max-md:ms-5  xsm:max-md:h-[20%] md:h-[10%] flex justify-between xsm:w-[95%] md:w-[95%] xxl:w-[70%] flex-row  text-white xsm:max-md:text-primary;
+                box-sizing: border-box;
 
                 h2 {
                     @apply w-[10%] h-full flex justify-center items-center md:text-md;
+                    box-sizing: border-box;
                 } 
 
                 h4 {
                     @apply w-[90%] me-[10%] flex justify-center items-center md:text-sm text-white xsm:max-md:text-primary;
+                    box-sizing: border-box;
                 }
             }
     
             .step-box {
                 @apply xsm:max-md:w-auto xsm:max-md:h-auto md:w-[95%] lg:h-auto lg:w-auto items-center justify-center xsm:max-md:ms-5 relative overflow-hidden;
+                box-sizing: border-box;
 
                 img {
-                    @apply object-contain h-full w-full border-4 border-white rounded-md xsm:max-md:border-primary
+                    @apply object-contain h-full w-full border-4 border-white rounded-md xsm:max-md:border-primary;
+                    box-sizing: border-box;
                 }
 
                 .step-box-text {
                     @apply text-white w-full h-full absolute left-0 top-0 flex justify-evenly flex-col items-center border-transparent rounded-md opacity-0 transition hover:opacity-100 translate-y-[25px] hover:translate-y-0 bg-tintedBackground;
+                    box-sizing: border-box;
     
                     ul {
-                        @apply list-disc w-[80%]
+                        @apply list-disc w-[80%];
+                        box-sizing: border-box;
                     }
     
                     h3 {
-                        @apply text-center p-3 font-bold
+                        @apply text-center p-3 font-bold;
+                        box-sizing: border-box;
                     }
                 }
             }
@@ -120,25 +138,30 @@
 
     #createShirt {
         .shirt-steps {
-            @apply transition-colors delay-150 ease-in-out xsm:max-md:text-xsm lg:text-sm
+            @apply transition-colors delay-150 ease-in-out xsm:max-md:text-xsm lg:text-sm;
+            box-sizing: border-box;
         }
     }
 
     #chooseLogo {
         .brand-logo-container-not-active {
             @apply dotted-border h-[80%] w-[50%] xsm:max-md:w-[90%] flex flex-col items-center justify-center;
+            box-sizing: border-box;
         }
     
         .brand-logo-container-active {
             @apply h-[80%] w-[50%] flex flex-col items-center justify-center;
+            box-sizing: border-box;
         }
 
         .ai-prompt-container {
             @apply h-[55%] w-full xsm:max-lg:w-full xsm:max-md:flex flex-col justify-evenly;
+            box-sizing: border-box;
         }
     
         .ai-prompt-container-edit {
-            @apply h-[50%] xsm:max-md:w-[95%] w-[90%] flex flex-col justify-evenly
+            @apply h-[50%] xsm:max-md:w-[95%] w-[90%] flex flex-col justify-evenly;
+            box-sizing: border-box;
         }
 
         .util-styles-no-edit {
@@ -157,15 +180,18 @@
         }
 
         .brand-logo-btns {
-            @apply border-none rounded-none w-[90%] h-[60%] bg-primary text-white
+            @apply border-none rounded-none w-[90%] h-[60%] bg-primary text-white;
+            box-sizing: border-box;
         }
 
         .brand-logo-btns-edit {
-            @apply border-none rounded-none w-[90%] h-[60%] bg-primary text-white
+            @apply border-none rounded-none w-[90%] h-[60%] bg-primary text-white;
+            box-sizing: border-box;
         }
 
         .brand-logo-size {
-            @apply max-w-[90%] max-h-[90%]
+            @apply max-w-[90%] max-h-[90%];
+            box-sizing: border-box;
         }
     
         #upload {
@@ -195,19 +221,23 @@
 
     #chooseBrandName {
         .select-containers {
-            @apply flex flex-col justify-around
+            @apply flex flex-col justify-around;
+            box-sizing: border-box;
         }
 
         .brand-name-inputs {
-            @apply bg-slightPurple h-[33%] border rounded-md
+            @apply bg-slightPurple h-[33%] border rounded-md;
+            box-sizing: border-box;
         }
 
         .brand-name-labels {
-            @apply text-undertext text-xsm font-semibold text-start xsm:max-md:text-center lg:text-xsm xsm:max-md:text-xxsm
+            @apply text-undertext text-xsm font-semibold text-start xsm:max-md:text-center lg:text-xsm xsm:max-md:text-xxsm;
+            box-sizing: border-box;
         }
             
         .brand-name-btns {
-            @apply w-[25%] h-[50%] md:w-[35%] md:h-[40%] xsm:max-md:w-[40%] xsm:max-md:h-[70%]
+            @apply w-[25%] h-[50%] md:w-[35%] md:h-[40%] xsm:max-md:w-[40%] xsm:max-md:h-[70%];
+            box-sizing: border-box;
         }
     }
 
@@ -220,7 +250,8 @@
     background-size: cover;
 
     .result-btns {
-        @apply w-[30%] md:text-xsm xsm:max-lg:h-[40%] lg:h-[50%] xsm:max-md:text-xxsm 
+        @apply w-[30%] md:text-xsm xsm:max-lg:h-[40%] lg:h-[50%] xsm:max-md:text-xxsm;
+        box-sizing: border-box;
     }
 }
 
